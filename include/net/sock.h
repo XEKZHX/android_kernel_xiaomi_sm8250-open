@@ -151,6 +151,7 @@ typedef __u64 __bitwise __addrpair;
  *	for struct sock and struct inet_timewait_sock.
  */
 struct sock_common {
+
 	/* skc_daddr and skc_rcv_saddr must be grouped on a 8 bytes aligned
 	 * address on 64bit arches : cf INET_MATCH()
 	 */
@@ -236,6 +237,8 @@ struct sock_common {
 	};
 	/* public: */
 };
+
+struct bpf_sk_storage;
 
 /**
   *	struct sock - network layer representation of sockets
@@ -509,6 +512,9 @@ struct sock {
 #endif
 	void                    (*sk_destruct)(struct sock *sk);
 	struct sock_reuseport __rcu	*sk_reuseport_cb;
+#ifdef CONFIG_BPF_SYSCALL
+	struct bpf_sk_storage __rcu	*sk_bpf_storage;
+#endif
 	struct rcu_head		sk_rcu;
 
 	ANDROID_KABI_RESERVE(1);

@@ -2320,7 +2320,14 @@ union bpf_attr {
 	FN(ringbuf_reserve),		\
 	FN(ringbuf_submit),		\
 	FN(ringbuf_discard),		\
-	FN(ringbuf_query),
+	FN(ringbuf_query),		\
+	FN(spin_lock),			\
+    	FN(spin_unlock),		\
+    	FN(sk_storage_get),		\
+    	FN(sk_storage_delete),		\
+   	FN(sk_release),			\
+    	FN(sk_lookup_tcp),		\
+    	FN(sk_lookup_udp),		
 
 /* integer value in 'imm' field of BPF_CALL instruction selects which helper
  * function eBPF program intends to call

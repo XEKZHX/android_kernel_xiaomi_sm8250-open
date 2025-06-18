@@ -590,6 +590,54 @@ static int dev_map_hash_delete_elem(struct bpf_map *map, void *key)
 	return ret;
 }
 
+static struct bpf_dtab_netdev *__dev_map_alloc_node(struct net *net,
+						    struct bpf_dtab *dtab,
+						    struct bpf_devmap_val *val,
+						    unsigned int idx)
+{
+	struct bpf_prog *prog = NULL;
+	struct bpf_dtab_netdev *dev;
+
+	dev = bpf_map_kmalloc_node(&dtab->map, sizeof(*dev),
+				   GFP_ATOMIC | __GFP_NOWARN,
+				   dtab->map.numa_node);
+	if (!dev)
+		return ERR_PTR(-ENOMEM);
+
+	dev->dev = dev_get_by_index(net, val->ifindex);
+	if (!dev->dev)
+		goto err_out;
+
+	if (val->bpf_prog.fd > 0) {
+		prog = bpf_prog_get_type_dev(val->bpf_prog.fd,
+					     BPF_PROG_TYPE_XDP, false);
+		if (IS_ERR(prog))
+			goto err_put_dev;
+		if (prog->expected_attach_type != BPF_XDP_DEVMAP)
+			goto err_put_prog;
+	}
+
+	dev->idx = idx;
+	dev->dtab = dtab;
+	if (prog) {
+		dev->xdp_prog = prog;
+		dev->val.bpf_prog.id = prog->aux->id;
+	} else {
+		dev->xdp_prog = NULL;
+		dev->val.bpf_prog.id = 0;
+	}
+	dev->val.ifindex = val->ifindex;
+
+	return dev;
+err_put_prog:
+	bpf_prog_put(prog);
+err_put_dev:
+	dev_put(dev->dev);
+err_out:
+	kfree(dev);
+	return ERR_PTR(-EINVAL);
+}
+
 static int dev_map_update_elem(struct bpf_map *map, void *key, void *value,
 				u64 map_flags)
 {

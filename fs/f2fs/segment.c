@@ -2762,7 +2762,7 @@ static int __f2fs_init_atgc_curseg(struct f2fs_sb_info *sbi, bool force)
 	mutex_lock(&curseg->curseg_mutex);
 	down_write(&SIT_I(sbi)->sentry_lock);
 
-	ret = get_atssr_segment(sbi, CURSEG_ALL_DATA_ATGC,
+	get_atssr_segment(sbi, CURSEG_ALL_DATA_ATGC,
 							CURSEG_COLD_DATA, SSR, 0);
 
 	up_write(&SIT_I(sbi)->sentry_lock);

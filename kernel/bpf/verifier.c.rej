@@ -1,0 +1,96 @@
+--- kernel/bpf/verifier.c
++++ kernel/bpf/verifier.c
+@@ -653,6 +839,9 @@ static int copy_verifier_state(struct bpf_verifier_state *dst_state,
+ 	}
+ 	dst_state->speculative = src->speculative;
+ 	dst_state->curframe = src->curframe;
++	dst_state->parent = src->parent;
++	dst_state->active_spin_lock = src->active_spin_lock;
++
+ 	for (i = 0; i <= src->curframe; i++) {
+ 		dst = dst_state->frame[i];
+ 		if (!dst) {
+@@ -2998,6 +3630,13 @@ static int check_func_call(struct bpf_verifier_env *env, struct bpf_insn *insn,
+ 			state->curframe + 1 /* frameno within this callchain */,
+ 			subprog /* subprog number within this prog */);
+ 
++	/* Transfer references to the callee */
++	err = transfer_reference_state(callee, caller);
++	if (err)
++		return err;
++
++	/* copy r1 - r5 args that callee can access */
++
+ 	/* copy r1 - r5 args that callee can access.  The copy includes parent
+ 	 * pointers, which connects us up to the liveness chain
+ 	 */
+@@ -3685,7 +4357,7 @@ static int adjust_ptr_min_max_vals(struct bpf_verifier_env *env,
+ 	    umin_ptr = ptr_reg->umin_value, umax_ptr = ptr_reg->umax_value;
+ 	struct bpf_sanitize_info info = {};
+ 	u8 opcode = BPF_OP(insn->code);
+-	u32 dst = insn->dst_reg;
++	u32 dst = insn->dst_reg, src = insn->src_reg;
+ 	int ret;
+ 
+ 	dst_reg = &regs[dst];
+@@ -5983,18 +6962,21 @@ static bool stacksafe(struct bpf_verifier_env *env, struct bpf_func_state *old,
+  * the current state will reach 'bpf_exit' instruction safely
+  */
+ static bool func_states_equal(struct bpf_verifier_env *env, struct bpf_func_state *old,
+-			      struct bpf_func_state *cur)
++								struct bpf_func_state *cur)
+ {
+ 	int i;
+ 
+ 	memset(env->idmap_scratch, 0, sizeof(env->idmap_scratch));
+ 	for (i = 0; i < MAX_BPF_REG; i++)
+-		if (!regsafe(env, &old->regs[i], &cur->regs[i],
+-			     env->idmap_scratch))
+-			return false;
++	if (!regsafe(env, &old->regs[i], &cur->regs[i],
++	env->idmap_scratch))
++	return false;
+ 
+ 	if (!stacksafe(env, old, cur, env->idmap_scratch))
+-		return false;
++	return false;
++
++	if (!refsafe(old, cur))
++	return false;
+ 
+ 	return true;
+ }
+@@ -6919,6 +8012,7 @@ static int convert_ctx_accesses(struct bpf_verifier_env *env)
+ 	for (i = 0; i < insn_cnt; i++, insn++) {
+ 		bool ctx_access;
+ 
++		bpf_convert_ctx_access_t convert_ctx_access;
+ 		if (insn->code == (BPF_LDX | BPF_MEM | BPF_B) ||
+ 		    insn->code == (BPF_LDX | BPF_MEM | BPF_H) ||
+ 		    insn->code == (BPF_LDX | BPF_MEM | BPF_W) ||
+@@ -6959,10 +8053,22 @@ static int convert_ctx_accesses(struct bpf_verifier_env *env)
+ 
+ 		if (!ctx_access)
+ 			continue;
+-
+-		if (env->insn_aux_data[i + delta].ptr_type != PTR_TO_CTX)
++		switch (env->insn_aux_data[i + delta].ptr_type) {
++		case PTR_TO_CTX:
++			if (!ops->convert_ctx_access)
++				continue;
++			convert_ctx_access = ops->convert_ctx_access;
++			break;
++		case PTR_TO_SOCKET:
++		case PTR_TO_SOCK_COMMON:
++			convert_ctx_access = bpf_sock_convert_ctx_access;
++			break;
++		case PTR_TO_TCP_SOCK:
++			convert_ctx_access = bpf_tcp_sock_convert_ctx_access;
++			break;
++		default:
+ 			continue;
+-
++		}
+ 		ctx_field_size = env->insn_aux_data[i + delta].ctx_field_size;
+ 		size = BPF_LDST_BYTES(insn);
+ 

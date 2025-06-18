@@ -1,0 +1,688 @@
+can't find file to patch at input line 5
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/arch/x86/net/bpf_jit_comp.c b/arch/x86/net/bpf_jit_comp.c
+|index 81c3d4b4c7e2..93a801fb6443 100644
+|--- a/arch/x86/net/bpf_jit_comp.c
+|+++ b/arch/x86/net/bpf_jit_comp.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 18
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/fs/nsfs.c b/fs/nsfs.c
+|index 30d150a4f0c6..a77a65e3f2af 100644
+|--- a/fs/nsfs.c
+|+++ b/fs/nsfs.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+7 out of 7 hunks ignored
+can't find file to patch at input line 137
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/fs/proc/namespaces.c b/fs/proc/namespaces.c
+|index dd2b35f78b09..08dd94df1a66 100644
+|--- a/fs/proc/namespaces.c
+|+++ b/fs/proc/namespaces.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 167
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/fs/proc/proc_sysctl.c b/fs/proc/proc_sysctl.c
+|index 7c62a526506c..1cef7c857ad4 100644
+|--- a/fs/proc/proc_sysctl.c
+|+++ b/fs/proc/proc_sysctl.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 190
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/bpf-cgroup.h b/include/linux/bpf-cgroup.h
+|index ad6b30137ac2..55963a9abbf1 100644
+|--- a/include/linux/bpf-cgroup.h
+|+++ b/include/linux/bpf-cgroup.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+10 out of 10 hunks ignored
+can't find file to patch at input line 432
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/bpf.h b/include/linux/bpf.h
+|index d2b881e5d834..d36b77f67205 100644
+|--- a/include/linux/bpf.h
+|+++ b/include/linux/bpf.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+20 out of 20 hunks ignored
+can't find file to patch at input line 851
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/bpf_types.h b/include/linux/bpf_types.h
+|index cd26c090e7c0..ccbe7c547e4a 100644
+|--- a/include/linux/bpf_types.h
+|+++ b/include/linux/bpf_types.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+4 out of 4 hunks ignored
+can't find file to patch at input line 896
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/bpf_verifier.h b/include/linux/bpf_verifier.h
+|index 4acd06cca703..5682f39bff9f 100644
+|--- a/include/linux/bpf_verifier.h
+|+++ b/include/linux/bpf_verifier.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+9 out of 9 hunks ignored
+can't find file to patch at input line 1039
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/btf.h b/include/linux/btf.h
+|index e076c4697049..634216e1f258 100644
+|--- a/include/linux/btf.h
+|+++ b/include/linux/btf.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1079
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/filter.h b/include/linux/filter.h
+|index b6903c0c5ca0..893b6f845655 100644
+|--- a/include/linux/filter.h
+|+++ b/include/linux/filter.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+6 out of 6 hunks ignored
+can't find file to patch at input line 1175
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/proc_ns.h b/include/linux/proc_ns.h
+|index d31cb6215905..aed366b4795c 100644
+|--- a/include/linux/proc_ns.h
+|+++ b/include/linux/proc_ns.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 1192
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/skbuff.h b/include/linux/skbuff.h
+|index 2bb6429816b4..0c8606d0d2ce 100644
+|--- a/include/linux/skbuff.h
+|+++ b/include/linux/skbuff.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+8 out of 8 hunks ignored
+patching file b/include/linux/skmsg.h
+can't find file to patch at input line 1756
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/linux/tracepoint-defs.h b/include/linux/tracepoint-defs.h
+|index 49ba9cde7e4b..ff9fdfec04c5 100644
+|--- a/include/linux/tracepoint-defs.h
+|+++ b/include/linux/tracepoint-defs.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+patching file b/include/net/bpf_sk_storage.h
+can't find file to patch at input line 1793
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/net/net_namespace.h b/include/net/net_namespace.h
+|index 8770cfe22b8b..2baa6a365fa6 100644
+|--- a/include/net/net_namespace.h
+|+++ b/include/net/net_namespace.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1814
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/net/sch_generic.h b/include/net/sch_generic.h
+|index f571833df9a3..484ca94ce6ac 100644
+|--- a/include/net/sch_generic.h
+|+++ b/include/net/sch_generic.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1844
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/net/sock.h b/include/net/sock.h
+|index 28abc25761ef..f9a09709ebc9 100644
+|--- a/include/net/sock.h
+|+++ b/include/net/sock.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1867
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/net/tcp.h b/include/net/tcp.h
+|index 81fe28c625db..502ed51bb420 100644
+|--- a/include/net/tcp.h
+|+++ b/include/net/tcp.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1915
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/net/xfrm.h b/include/net/xfrm.h
+|index 94159dc547fc..42d8c641bf4d 100644
+|--- a/include/net/xfrm.h
+|+++ b/include/net/xfrm.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 1935
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/trace/bpf_probe.h b/include/trace/bpf_probe.h
+|index 505dae0bed80..0a6e052e8da1 100644
+|--- a/include/trace/bpf_probe.h
+|+++ b/include/trace/bpf_probe.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 1984
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/uapi/linux/bpf.h b/include/uapi/linux/bpf.h
+|index 17cff15efcdf..c4da15c51556 100644
+|--- a/include/uapi/linux/bpf.h
+|+++ b/include/uapi/linux/bpf.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+19 out of 19 hunks ignored
+can't find file to patch at input line 2527
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/include/uapi/linux/btf.h b/include/uapi/linux/btf.h
+|index 1e2662ff0529..11b0cd6bbc42 100644
+|--- a/include/uapi/linux/btf.h
+|+++ b/include/uapi/linux/btf.h
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+4 out of 4 hunks ignored
+can't find file to patch at input line 2601
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/Kconfig.locks b/kernel/Kconfig.locks
+|index 621c296fe8f8..c4c8062429a3 100644
+|--- a/kernel/Kconfig.locks
+|+++ b/kernel/Kconfig.locks
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 2615
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/Makefile b/kernel/bpf/Makefile
+|index ffc39a7e028d..5681eefa17cb 100644
+|--- a/kernel/bpf/Makefile
+|+++ b/kernel/bpf/Makefile
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can't find file to patch at input line 2640
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/arraymap.c b/kernel/bpf/arraymap.c
+|index 03e244b11f5a..02ea8b8f3e73 100644
+|--- a/kernel/bpf/arraymap.c
+|+++ b/kernel/bpf/arraymap.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+5 out of 5 hunks ignored
+can't find file to patch at input line 2745
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/btf.c b/kernel/bpf/btf.c
+|index 62e05b6283c0..4aab9a4ab924 100644
+|--- a/kernel/bpf/btf.c
+|+++ b/kernel/bpf/btf.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+54 out of 54 hunks ignored
+can't find file to patch at input line 3944
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/cgroup.c b/kernel/bpf/cgroup.c
+|index 6a7d931bbc55..3f3337d390b1 100644
+|--- a/kernel/bpf/cgroup.c
+|+++ b/kernel/bpf/cgroup.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+15 out of 15 hunks ignored
+can't find file to patch at input line 4608
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/core.c b/kernel/bpf/core.c
+|index 14f453a768e6..62bff97efb85 100644
+|--- a/kernel/bpf/core.c
+|+++ b/kernel/bpf/core.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+11 out of 11 hunks ignored
+can't find file to patch at input line 4832
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/devmap.c b/kernel/bpf/devmap.c
+|index fa22a489f832..30f85922a399 100644
+|--- a/kernel/bpf/devmap.c
+|+++ b/kernel/bpf/devmap.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+12 out of 12 hunks ignored
+can't find file to patch at input line 5144
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/disasm.c b/kernel/bpf/disasm.c
+|index cbd75dd5992e..1c32aaf3803f 100644
+|--- a/kernel/bpf/disasm.c
+|+++ b/kernel/bpf/disasm.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 5162
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/hashtab.c b/kernel/bpf/hashtab.c
+|index bca328703046..16661fe63571 100644
+|--- a/kernel/bpf/hashtab.c
+|+++ b/kernel/bpf/hashtab.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+7 out of 7 hunks ignored
+can't find file to patch at input line 5294
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/helpers.c b/kernel/bpf/helpers.c
+|index c54e3ac03389..6bbff2a0b4df 100644
+|--- a/kernel/bpf/helpers.c
+|+++ b/kernel/bpf/helpers.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+3 out of 3 hunks ignored
+can't find file to patch at input line 5428
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/local_storage.c b/kernel/bpf/local_storage.c
+|index fc1605aee5ea..1bb69d72aeb1 100644
+|--- a/kernel/bpf/local_storage.c
+|+++ b/kernel/bpf/local_storage.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+8 out of 8 hunks ignored
+can't find file to patch at input line 5794
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/lpm_trie.c b/kernel/bpf/lpm_trie.c
+|index a929ee0e86b1..eb9c7dc6d754 100644
+|--- a/kernel/bpf/lpm_trie.c
+|+++ b/kernel/bpf/lpm_trie.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 5806
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/map_in_map.c b/kernel/bpf/map_in_map.c
+|index 051c5e40792c..f524bf2d73f2 100644
+|--- a/kernel/bpf/map_in_map.c
+|+++ b/kernel/bpf/map_in_map.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 5822
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/offload.c b/kernel/bpf/offload.c
+|index 66e13aace241..ca2e8fdca409 100644
+|--- a/kernel/bpf/offload.c
+|+++ b/kernel/bpf/offload.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+patching file b/kernel/bpf/ringbuf.c
+The next patch would delete the file a/kernel/bpf/sockmap.c,
+which does not exist!  Assume -R? [n] 
+Apply anyway? [n] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 9005
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/syscall.c b/kernel/bpf/syscall.c
+|index 02e5bdb82a9a..fbe1997b003a 100644
+|--- a/kernel/bpf/syscall.c
+|+++ b/kernel/bpf/syscall.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+33 out of 33 hunks ignored
+can't find file to patch at input line 9586
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/bpf/verifier.c b/kernel/bpf/verifier.c
+|index de0926cff835..c40b1297948d 100644
+|--- a/kernel/bpf/verifier.c
+|+++ b/kernel/bpf/verifier.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+95 out of 95 hunks ignored
+can't find file to patch at input line 12043
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/events/core.c b/kernel/events/core.c
+|index 838ff9b65021..ebd61c6fb717 100644
+|--- a/kernel/events/core.c
+|+++ b/kernel/events/core.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 12056
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/sys.c b/kernel/sys.c
+|index 4ccb49f666ac..b08a1f18e7b5 100644
+|--- a/kernel/sys.c
+|+++ b/kernel/sys.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 12074
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/kernel/trace/bpf_trace.c b/kernel/trace/bpf_trace.c
+|index 6317249a434f..82de83b556b0 100644
+|--- a/kernel/trace/bpf_trace.c
+|+++ b/kernel/trace/bpf_trace.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+3 out of 3 hunks ignored
+can't find file to patch at input line 12136
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/Kconfig b/net/Kconfig
+|index 08ea80af0ed7..99a27b69c1f5 100644
+|--- a/net/Kconfig
+|+++ b/net/Kconfig
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+3 out of 3 hunks ignored
+can't find file to patch at input line 12177
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/bpf/test_run.c b/net/bpf/test_run.c
+|index e0c6dfae42d8..c08f2f990f2d 100644
+|--- a/net/bpf/test_run.c
+|+++ b/net/bpf/test_run.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+3 out of 3 hunks ignored
+can't find file to patch at input line 12208
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/core/Makefile b/net/core/Makefile
+|index a38e0d19d795..dccebc5cd0ca 100644
+|--- a/net/core/Makefile
+|+++ b/net/core/Makefile
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+patching file b/net/core/bpf_sk_storage.c
+can't find file to patch at input line 13049
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/core/filter.c b/net/core/filter.c
+|index 46fc2daf9564..c03b75a9a0db 100644
+|--- a/net/core/filter.c
+|+++ b/net/core/filter.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+39 out of 39 hunks ignored
+can't find file to patch at input line 14129
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/core/flow_dissector.c b/net/core/flow_dissector.c
+|index da860a680256..b744afc455ab 100644
+|--- a/net/core/flow_dissector.c
+|+++ b/net/core/flow_dissector.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+5 out of 5 hunks ignored
+can't find file to patch at input line 14288
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/core/skbuff.c b/net/core/skbuff.c
+|index d9d8736365e4..ab40e4d421cb 100644
+|--- a/net/core/skbuff.c
+|+++ b/net/core/skbuff.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+6 out of 6 hunks ignored
+patching file b/net/core/skmsg.c
+patching file b/net/core/sock_map.c
+can't find file to patch at input line 16256
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/ipv4/Makefile b/net/ipv4/Makefile
+|index 7446b98661d8..58629314eae9 100644
+|--- a/net/ipv4/Makefile
+|+++ b/net/ipv4/Makefile
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 16268
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/ipv4/ip_output.c b/net/ipv4/ip_output.c
+|index 3e15c1b388ae..edf33d4baa8b 100644
+|--- a/net/ipv4/ip_output.c
+|+++ b/net/ipv4/ip_output.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+patching file b/net/ipv4/tcp_bpf.c
+can't find file to patch at input line 16941
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/ipv6/ip6_output.c b/net/ipv6/ip6_output.c
+|index 52f0ddb3835b..a22075eae0f0 100644
+|--- a/net/ipv6/ip6_output.c
+|+++ b/net/ipv6/ip6_output.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 16953
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/netfilter/nft_meta.c b/net/netfilter/nft_meta.c
+|index 061a29bd3066..adf603d33c4c 100644
+|--- a/net/netfilter/nft_meta.c
+|+++ b/net/netfilter/nft_meta.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored
+can't find file to patch at input line 16966
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/socket.c b/net/socket.c
+|index a2677d493edc..17cdb5e771c4 100644
+|--- a/net/socket.c
+|+++ b/net/socket.c
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+6 out of 6 hunks ignored
+can't find file to patch at input line 17042
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff --git a/net/strparser/Kconfig b/net/strparser/Kconfig
+|index 6cff3f6d0c3a..94da19a2a220 100644
+|--- a/net/strparser/Kconfig
+|+++ b/net/strparser/Kconfig
+--------------------------
+File to patch: 
+Skip this patch? [y] 
+Skipping patch.
+1 out of 1 hunk ignored

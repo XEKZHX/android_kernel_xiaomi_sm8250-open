@@ -85,6 +85,7 @@ struct bpf_reg_state {
 	s64 smax_value; /* maximum possible (s64)value */
 	u64 umin_value; /* minimum possible (u64)value */
 	u64 umax_value; /* maximum possible (u64)value */
+	u32 ref_obj_id;
 	/* Inside the callee two registers can be both PTR_TO_STACK like
 	 * R1=fp-8 and R2=fp-8, but one of them points to this function stack
 	 * while another to the caller's stack. To differentiate them 'frameno'
@@ -150,9 +151,22 @@ struct bpf_verifier_state {
 	/* call stack tracking */
 	struct bpf_func_state *frame[MAX_CALL_FRAMES];
 	struct bpf_verifier_state *parent;
+	struct bpf_verifier_state *parent;
 	u32 curframe;
+	u32 active_spin_lock;
 	bool speculative;
 };
+
+#define bpf_get_spilled_reg(slot, frame)				\
+	(((slot < frame->allocated_stack / BPF_REG_SIZE) &&		\
+	  (frame->stack[slot].slot_type[0] == STACK_SPILL))		\
+	 ? &frame->stack[slot].spilled_ptr : NULL)
+
+/* Iterate over 'frame', setting 'reg' to either NULL or a spilled register. */
+#define bpf_for_each_spilled_reg(iter, frame, reg)			\
+	for (iter = 0, reg = bpf_get_spilled_reg(iter, frame);		\
+	     iter < frame->allocated_stack / BPF_REG_SIZE;		\
+	     iter++, reg = bpf_get_spilled_reg(iter, frame))
 
 /* linked list of verifier states used to prune search */
 struct bpf_verifier_state_list {

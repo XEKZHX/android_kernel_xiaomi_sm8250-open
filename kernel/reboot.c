@@ -279,9 +279,9 @@ static void kernel_shutdown_prepare(enum system_states state)
  *	Shutdown everything and perform a clean system halt.
  */
 void kernel_halt(void)
-{
-	pr_emerg("System halted\n");
+{	
 	kmsg_dump(KMSG_DUMP_HALT);
+	pr_emerg("System halted\n");
 	kernel_shutdown_prepare(SYSTEM_HALT);
 	migrate_to_reboot_cpu();
 	syscore_shutdown();
@@ -295,9 +295,9 @@ EXPORT_SYMBOL_GPL(kernel_halt);
  *	Shutdown everything and perform a clean system power_off.
  */
 void kernel_power_off(void)
-{
-	pr_emerg("Power down\n");
+{	
 	kmsg_dump(KMSG_DUMP_POWEROFF);
+	pr_emerg("Power down\n");
 	kernel_shutdown_prepare(SYSTEM_POWER_OFF);
 	if (pm_power_off_prepare)
 		pm_power_off_prepare();
